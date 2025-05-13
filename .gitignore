@@ -1,0 +1,6 @@
+*.env
+*.log
+node_modules/
+.DS_Store
+docker_web_app-db-1/
+docker_web_app-web-1/

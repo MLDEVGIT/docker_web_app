@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    build: ./web_app
+    ports:
+      - "8081:80"
+    networks:
+      - app_network
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: web_data
+    ports:
+      - "3308:3306"
+    networks:
+      - app_network
+
+networks:
+  app_network:
